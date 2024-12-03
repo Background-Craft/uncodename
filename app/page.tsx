@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { generateCodename } from "@/lib/utils/codename";
 import HyperText from "@/components/ui/hyper-text";
+import LogoSquare from "@/components/logos/square";
 
 const UncodenameGenerator = () => {
   const [currentCodename, setCurrentCodename] = useState({
@@ -43,7 +44,7 @@ const UncodenameGenerator = () => {
         <Card className="w-full max-w-lg bg-gray-800 text-white border-gray-700">
           <CardHeader>
             <CardTitle className="text-3xl font-bold flex items-center gap-2">
-              <Sparkles className="w-8 h-8 text-yellow-500" />
+              <LogoSquare className="w-8 h-8" />
               uncodename
             </CardTitle>
             <CardDescription className="text-gray-400">
