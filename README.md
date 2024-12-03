@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Uncodename - Secret Codename Generator
 
-## Getting Started
+![Uncodename](public/og-image.jpg)
 
-First, run the development server:
+A mysterious and powerful codename generator for your secret projects, usernames, or spy adventures. Built with Next.js, TypeScript, and Tailwind CSS.
+
+🔗 **[Check it out: uncodename.com](https://uncodename.com)** - Go generate a codename, you mysterious bastard.
+
+## ✨ Features
+
+- Generate unique codenames combining adjectives and nouns
+- Smart repetition prevention system
+- Cryptographically secure random generation
+- Sleek, dark-mode interface
+- Animated text transitions
+- One-click copy functionality
+- Fully responsive design
+
+## 🚀 Tech Stack
+
+- [Next.js 15](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Shadcn](https://ui.shadcn.com/)
+
+## 🛠️ Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/background-craft/uncodename.git
+cd uncodename
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies (pnpm recommended for Next.js 15 + shadcn):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# recommended
+pnpm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# or if you prefer
+npm install
+yarn install
+```
 
-## Learn More
+3. Run the development server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# recommended
+pnpm dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# or if you prefer
+npm run dev
+yarn dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
+## 🎯 Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Simply visit the website and click the "Generate Another" button to create new codenames. Click the "Copy" button to copy the generated codename to your clipboard.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit issues and pull requests.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🌟 Credits
+
+Created by [Background Craft](https://backgroundcraft.com). Don't blame us if your new identity is too powerful.
+
+---
+
+Note: This project is meant for entertainment purposes. Any resemblance to actual secret agents or spy organizations is purely coincidental... or is it? 🕵️‍♂️
