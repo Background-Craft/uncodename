@@ -22,7 +22,10 @@ export const getRandomElement = (
   // Update recent items
   recentSet.add(result);
   if (recentSet.size > HISTORY_SIZE) {
-    recentSet.delete(recentSet.values().next().value);
+    const firstValue = recentSet.values().next().value;
+    if (firstValue) {
+      recentSet.delete(firstValue);
+    }
   }
 
   return result;
