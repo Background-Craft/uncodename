@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { RefreshCcw, Copy } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -13,6 +12,14 @@ import { Button } from "@/components/ui/button";
 import { generateCodename } from "@/lib/utils/codename";
 import HyperText from "@/components/ui/hyper-text";
 import LogoSquare from "@/components/logos/square";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandX,
+  IconCopy,
+  IconRefresh,
+} from "@tabler/icons-react";
+import Link from "next/link";
 
 const UncodenameGenerator = () => {
   const [currentCodename, setCurrentCodename] = useState({
@@ -40,6 +47,22 @@ const UncodenameGenerator = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col">
+      <div className="flex justify-center gap-4 p-4 text-gray-300">
+        <Link href="https://backgroundcraft.com" target="_blank">
+          <LogoSquare className="w-6 h-6 " />
+        </Link>
+        <Link href="https://x.com/background_bots" target="_blank">
+          <IconBrandX strokeWidth={1} className="w-6 h-6 " />
+        </Link>
+        <Link href="https://github.com/background-craft" target="_blank">
+          <IconBrandGithub strokeWidth={1} className="w-6 h-6 " />
+        </Link>
+        <Link
+          href="https://linkedin.com/company/backgroundcraft"
+          target="_blank">
+          <IconBrandLinkedin strokeWidth={1} className="w-6 h-6 " />
+        </Link>
+      </div>
       <div className="flex-1 flex items-center justify-center p-4">
         <Card className="w-full max-w-lg bg-gray-800 text-white border-gray-700">
           <CardHeader>
@@ -69,13 +92,13 @@ const UncodenameGenerator = () => {
                 <Button
                   className="flex-1 bg-green-500 hover:bg-green-700 text-gray-900"
                   onClick={handleNewCodename}>
-                  <RefreshCcw className="w-4 h-4 mr-2" />
+                  <IconRefresh className="w-4 h-4 mr-2" />
                   Generate Another
                 </Button>
                 <Button
                   className="flex-1 bg-gray-700 hover:bg-gray-600 text-white"
                   onClick={handleCopy}>
-                  <Copy className="w-4 h-4 mr-2" />
+                  <IconCopy className="w-4 h-4 mr-2" />
                   {copyText}
                 </Button>
               </div>
