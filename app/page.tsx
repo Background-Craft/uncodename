@@ -10,25 +10,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { adjectives, nouns } from "@/lib/data";
-
-const getRandomElement = (array: string[], previous: string) => {
-  let result;
-  do {
-    result = array[Math.floor(Math.random() * array.length)];
-  } while (result === previous);
-  return result;
-};
-
-const generateCodename = (prevAdj: string, prevNoun: string) => {
-  const adj = getRandomElement(adjectives, prevAdj);
-  const noun = getRandomElement(nouns, prevNoun);
-  return {
-    codename: `${adj}-${noun}-${Math.floor(Math.random() * 1000)}`,
-    adj,
-    noun,
-  };
-};
+import { generateCodename } from "@/lib/utils/codename";
+import HyperText from "@/components/ui/hyper-text";
 
 const UncodenameGenerator = () => {
   const [currentCodename, setCurrentCodename] = useState({
@@ -73,9 +56,12 @@ const UncodenameGenerator = () => {
                 <h2 className="text-sm text-gray-400 mb-2">
                   Your sneaky little codename is:
                 </h2>
-                <div className="text-2xl font-mono font-bold text-green-400">
-                  {currentCodename.codename}
-                </div>
+                <HyperText
+                  text={currentCodename.codename}
+                  className="text-2xl font-bold text-green-400"
+                  animateOnLoad={false}
+                  duration={100}
+                />
               </div>
 
               <div className="flex gap-4">
@@ -95,11 +81,11 @@ const UncodenameGenerator = () => {
 
               <div className="text-sm text-gray-400 mt-6">
                 <p>
-                  * Perfect for secret projects, usernames, or pretending you're
-                  a spy.
+                  * Perfect for secret projects, usernames, or pretending
+                  you&apos;re a spy.
                 </p>
                 <p>
-                  * We're not responsible for any identity crises that may
+                  * We&apos;re not responsible for any identity crises that may
                   occur.
                 </p>
               </div>
@@ -108,7 +94,15 @@ const UncodenameGenerator = () => {
         </Card>
       </div>
       <footer className="p-4 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Background Craft LLC. All rights reserved.
+        Crafted with questionable wisdom by the chaotic minds at{" "}
+        <a
+          href="https://backgroundcraft.com"
+          className="hover:text-gray-400 transition-colors underline underline-offset-2">
+          Background Craft
+        </a>
+        . Don&apos;t blame us if your new identity is too powerful.
+        <br />© {new Date().getFullYear()} Background Craft LLC. All rights
+        reserved.
       </footer>
     </div>
   );
