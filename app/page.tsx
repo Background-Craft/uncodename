@@ -66,7 +66,7 @@ const UncodenameGenerator = () => {
 
               <div className="flex gap-4">
                 <Button
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
+                  className="flex-1 bg-green-500 hover:bg-green-700 text-gray-900"
                   onClick={handleNewCodename}>
                   <RefreshCcw className="w-4 h-4 mr-2" />
                   Generate Another
